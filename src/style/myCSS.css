@@ -1,0 +1,37 @@
+.Recipe {
+    border: 0.5px solid black;
+    border-radius: 12px;
+    float: left;
+    width: 20%;
+    margin: 1%;
+    min-height: 400px;
+}
+
+.Recipe>img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+
+.float-container {
+    height: 50%;
+}
+
+.float-child {
+    display: inline-table;
+    margin-left: 10px;
+    min-height: 260px;
+}
+
+#myButton {
+    margin: auto;
+    position: relative;
+}
+
+#myimg{
+    width: 150px;
+}
+
+a{
+    margin-left: 15px;
+}
