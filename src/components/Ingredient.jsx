@@ -19,7 +19,7 @@ export default function Ingredient(props) {
     }, [checked]);
 
     return (
-        <div className='Ingredient' style={{ float: 'left', margin:'5px' }}>
+        <div className='col-md-8 col-lg-4 col-xl-2' style={{ float: 'left', margin:'5px' }}>
             <Card style={{ width: '18rem', minHeight:'350px'}}>
                 <Card.Img variant="top" src={props.imgUrl} height='100px' />
                 <Card.Body>

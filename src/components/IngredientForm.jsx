@@ -35,32 +35,50 @@ export default function IngredientForm() {
         <div className='IngredientForm'>
             <h3>New Ingredient</h3> <br />
             <Form>
-                <Form.Group className="mb-3" controlId="formBasicName">
-                    <Form.Label>Ingredient Name</Form.Label>
-                    <Form.Control type="name" placeholder="Is it yummy...?" onChange={(e) => setName(e.target.value)} value={name} />
-                </Form.Group>
+                <div className='row'>
+                    <div className='col-xs-12'>
+                        <Form.Group className="mb-3" controlId="formBasicName">
+                            <Form.Label>Ingredient Name</Form.Label>
+                            <Form.Control type="name" placeholder="Is it yummy...?" onChange={(e) => setName(e.target.value)} value={name} />
+                        </Form.Group>
+                    </div>
+                </div>
 
-                <Form.Group className="mb-3" controlId="formBasicImage">
-                    <Form.Label>Ingredient image</Form.Label>
-                    <Form.Control type="text" placeholder="Good looking" onChange={(e) => setImgURL(e.target.value)} value={imgUrl} />
-                    <Form.Text className="text-muted">
-                        Don't forget the complete url.
-                    </Form.Text>
-                </Form.Group>
+                <div className='row'>
+                    <div className='col-xs-12'>
+                        <Form.Group className="mb-3" controlId="formBasicImage">
+                            <Form.Label>Ingredient image</Form.Label>
+                            <Form.Control type="text" placeholder="Good looking" onChange={(e) => setImgURL(e.target.value)} value={imgUrl} />
+                            <Form.Text className="text-muted">
+                                Don't forget the complete url.
+                            </Form.Text>
+                        </Form.Group>
+                    </div>
+                </div>
 
-                <Form.Group className="mb-3" controlId="formBasicClories">
-                    <Form.Label>Ingredient calories</Form.Label>
-                    <Form.Control type="calories" placeholder="Enter calories..." onChange={(e) => setCalories(e.target.value)} value={calories} />
-                    <Form.Text className="text-muted">
-                        Diet
-                    </Form.Text>
-                </Form.Group>
-                <Button variant="primary" onClick={createIngredient}>Add Ingredient</Button>
-                <Button style={{ marginLeft: '10px' }} variant="secondary" onClick={() => {
-                    setCalories(0)
-                    setName('')
-                    setImgURL('')
-                }}>Clear Form</Button>
+                <div className='row'>
+                    <div className='col-xs-12'>
+                        <Form.Group className="mb-3" controlId="formBasicClories">
+                            <Form.Label>Ingredient calories</Form.Label>
+                            <Form.Control type="calories" placeholder="Enter calories..." onChange={(e) => setCalories(e.target.value)} value={calories} />
+                            <Form.Text className="text-muted">
+                                Diet
+                            </Form.Text>
+                        </Form.Group>
+                    </div>
+                </div>
+                <div className='row'>
+                    <div className='col-xs-12 col-sm-6'>
+                        <Button variant="primary" onClick={createIngredient}>Add Ingredient</Button>
+                    </div>
+                    <div className='col-xs-12 col-sm-6'>
+                        <Button style={{ marginLeft: '10px' }} variant="secondary" onClick={() => {
+                            setCalories(0)
+                            setName('')
+                            setImgURL('')
+                        }}>Clear Form</Button>
+                    </div>
+                </div>
             </Form>
         </div>
     )

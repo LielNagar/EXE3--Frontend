@@ -41,38 +41,59 @@ export default function RecipesForm() {
         <div className='RecipesForm'>
             <h3>New Recipe</h3> <br />
             <Form>
-                <Form.Group className="mb-3" controlId="formBasicName">
-                    <Form.Label>Recipe Name</Form.Label>
-                    <Form.Control type="name" placeholder="Is it yummy...?" onChange={(e) => setName(e.target.value)} value={name} />
-                </Form.Group>
+                <div className='row'>
+                    <div className='col-xs-12'>
+                        <Form.Group className="mb-3" controlId="formBasicName">
+                            <Form.Label>Recipe Name</Form.Label>
+                            <Form.Control type="name" placeholder="Is it yummy...?" onChange={(e) => setName(e.target.value)} value={name} />
+                        </Form.Group>
+                    </div>
+                </div>
 
-                <Form.Group className="mb-3" controlId="formBasicImage">
-                    <Form.Label>Recipe image</Form.Label>
-                    <Form.Control type="text" placeholder="Good looking" onChange={(e) => setImgUrl(e.target.value)} value={imgUrl} />
-                    <Form.Text className="text-muted">
-                        Don't forget the complete url.
-                    </Form.Text>
-                </Form.Group>
+                <div className='row'>
+                    <div className='col-xs-12'>
+                        <Form.Group className="mb-3" controlId="formBasicImage">
+                            <Form.Label>Recipe image</Form.Label>
+                            <Form.Control type="text" placeholder="Good looking" onChange={(e) => setImgUrl(e.target.value)} value={imgUrl} />
+                            <Form.Text className="text-muted">
+                                Don't forget the complete url.
+                            </Form.Text>
+                        </Form.Group>
+                    </div>
+                </div>
 
-                <Form.Group className="mb-3" controlId="formBasicCookingMethod">
-                    <Form.Label>Recipe Cooking Method</Form.Label>
-                    <Form.Control type="cookingMethod" placeholder="Enter cooking method..." onChange={(e) => setCookingMethod(e.target.value)} value={cookingMethod} />
-                    <Form.Text className="text-muted">
-                        please supply complete yummy method
-                    </Form.Text>
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formBasicTime">
-                    <Form.Label>Time</Form.Label>
-                    <Form.Control type="name" placeholder="How much time...?" onChange={(e) => setTime(e.target.value)} value={time} />
-                </Form.Group>
-                <Button variant="primary" onClick={createRecipe}>Add Recipe</Button>
-                <Button style={{ marginLeft: '10px' }} variant="secondary" onClick={() => {
-                    setTime(0)
-                    setName('')
-                    setImgUrl('')
-                    setCookingMethod('')
-                }}>Clear Form</Button>
+                <div className='row'>
+                    <div className='col-xs-12'>
+                        <Form.Group className="mb-3" controlId="formBasicCookingMethod">
+                            <Form.Label>Recipe Cooking Method</Form.Label>
+                            <Form.Control type="cookingMethod" placeholder="Enter cooking method..." onChange={(e) => setCookingMethod(e.target.value)} value={cookingMethod} />
+                            <Form.Text className="text-muted">
+                                please supply complete yummy method
+                            </Form.Text>
+                        </Form.Group>
+                    </div>
+                </div>
+                <div className='row'>
+                    <div className='col-xs-12'>
+                        <Form.Group className="mb-3" controlId="formBasicTime">
+                            <Form.Label>Time</Form.Label>
+                            <Form.Control type="name" placeholder="How much time...?" onChange={(e) => setTime(e.target.value)} value={time} />
+                        </Form.Group>
+                    </div>
+                </div>
+                <div className='row'>
+                    <div className='col-xs-12 col-sm-6'>
+                        <Button variant="primary" onClick={createRecipe}>Add Recipe</Button>
+                    </div>
+                    <div className='col-xs-12 col-sm-6'>
+                        <Button style={{ marginLeft: '10px' }} variant="secondary" onClick={() => {
+                            setTime(0)
+                            setName('')
+                            setImgUrl('')
+                            setCookingMethod('')
+                        }}>Clear Form</Button>
+                    </div>
+                </div>
             </Form>
             <br /><br />
             <Ingredients />

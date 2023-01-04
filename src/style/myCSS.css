@@ -15,12 +15,13 @@
 
 .float-container {
     height: 50%;
+    text-align: center;
 }
 
 .float-child {
     display: inline-table;
     margin-left: 10px;
-    min-height: 260px;
+    min-height: 230px;
 }
 
 #myButton {
